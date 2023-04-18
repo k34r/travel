@@ -1,0 +1,783 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: 0;
+	outline: 0;
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 400;
+}
+a {
+	text-decoration: none;
+}
+img {
+	display: block;
+}
+
+/* lato-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/lato-v23-latin-regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/lato-v23-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/lato-v23-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/lato-v23-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/lato-v23-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/lato-v23-latin-regular.svg#Lato') format('svg'); /* Legacy iOS */
+}
+
+/* lato-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/lato-v23-latin-700.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/lato-v23-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/lato-v23-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/lato-v23-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/lato-v23-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/lato-v23-latin-700.svg#Lato') format('svg'); /* Legacy iOS */
+}
+
+/**************** header ********************/
+
+.header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+}
+
+.header__active {
+	background-color: rgba(21, 24, 36, 0.6);
+}
+
+.header__logo {
+	display: block;
+	height: 31px;
+	width: 82px;
+	background: url(../pictures/svg/header-logo.svg) no-repeat center;
+
+}
+
+
+
+
+
+.header__nav {
+	max-width: 1060px;
+	margin: 0 auto;
+	padding-top: 56px;
+	padding-bottom: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+.header__nav__link {
+	font-size: 18px;
+	line-height: 24px;
+	color: #FFFFFF;
+	margin-right: 82px;
+}
+
+.header__nav__link:hover, .header__nav__link:focus, .header__nav__link:active {
+	opacity: .8;
+}
+
+.header__nav__link:last-child {
+	margin-right: 0;
+}
+
+
+
+/****************** discover *********************/
+.discover {
+	position: relative;
+	min-height: 100vh;
+	//width: 100vw;
+	background: url(../pictures/jpg/discover-background.jpg) no-repeat center;
+	background-size: cover;
+}
+
+.discover__wrapper {
+	max-width: 1060px;
+	margin: 0 auto;
+}
+
+.discover__title {
+	max-width: 619px;
+	padding-top: 263px;
+	margin-bottom: 22px;
+	font-weight: 500;
+	font-size: 50px;
+	line-height: 60px;
+	color: #FFFFFF;
+}
+
+.discover__text {
+	max-width: 546px;
+	font-size: 16px;
+	line-height: 24px;
+	color: #FFFFFF;
+	margin-bottom: 59px;
+}
+
+.discover__form {
+	padding-bottom: 260px;
+}
+
+.discover__form__input {
+	width: 297px;
+	background: transparent url(../pictures/svg/Oval.svg) no-repeat top left;
+	background-size: 20px;
+	padding-left: 42px;
+	padding-bottom: 22px;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 24px;
+	color: #FFFFFF;
+	border-bottom: 2px solid #BFC0C5;
+	margin-right: 60px;
+}
+
+.discover__form__input::placeholder {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 24px;
+	color: #FFFFFF;
+}
+
+.discover__form__button {
+	height: 58px;
+	width: 171px;
+	background: #1B7DFF;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 29px;
+	color: #FFFFFF;
+	margin-top: 20px;
+}
+
+.discover__form__button:hover, .discover__form__button:active, .discover__form__button:focus {
+	background: #1764cb;
+}
+
+/**************** benefits *********************/
+.benefits {
+	position: relative;
+	max-width: 1260px;
+	margin: 0 auto;
+	margin-bottom: 124px;
+	box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+}
+
+.benefits__title {
+	position: absolute;
+	width: 100%;
+	background: #fff;
+	transform: translateY(-80%);
+	padding: 92px 70px 120px 70px;
+}
+
+.benefits__cards {
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	padding-bottom: 112px;
+	gap: 55px;
+	margin: 0 70px;
+}
+
+.benefits__card {
+	position: relative;
+}
+
+.benefits__card__ico {
+	margin-bottom: 37px;
+}
+
+.benefits__card__title {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 24px;
+	color: #000000;
+	margin-bottom: 26px;
+}
+
+.benefits__card__text {
+	font-size: 16px;
+	line-height: 24px;
+	color: #000000;
+	margin-bottom: 39px;
+}
+
+.benefits__card__link {
+	font-size: 16px;
+	line-height: 24px;
+	color: #006DFE;
+	padding-right: 59px;
+	background: url(../pictures/svg/benefits-Shape.svg) no-repeat 90% center;
+	position: absolute;
+	bottom: 0;
+}
+
+.benefits__card__link:hover, .benefits__card__link:focus, .benefits__card__link:active {
+	background: url(../pictures/svg/benefits-Shape.svg) no-repeat right center;
+	color: #004fb9;
+}
+
+/**************** getinspired *********************/
+.getinspired {
+	max-width: 1260px;
+	margin: 0 auto;
+	margin-bottom: 90px;
+}
+
+.getispired__title {
+	position: relative;
+	font-weight: 500;
+	font-size: 35px;
+	line-height: 42px;
+	color: #102746;
+}
+
+.getispired__title::after {
+	position: absolute;
+	display: block;
+	content: '';
+	left: 0;
+	bottom: -10px;
+	width: 253px;
+	height: 3px;
+	background: #006DFE;
+}
+
+.getinspired__title__wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-bottom: 46px;
+}
+
+.getinspired__link {
+	font-size: 16px;
+	line-height: 24px;
+	color: #006DFE;
+	padding-right: 59px;
+	background: url(../pictures/svg/benefits-Shape.svg) no-repeat 90% center;
+}
+
+.getinspired__link:hover, .getinspired__link:focus, .getinspired__link:active {
+		background: url(../pictures/svg/benefits-Shape.svg) no-repeat right center;
+	color: #004fb9;
+}
+
+.getinspired__cards {
+	display: grid;
+	grid-template-columns: repeat(6,1fr);
+	gap: 10px;
+}
+
+.card__large {
+  max-height: 354px;
+	grid-column: span 3;
+}
+
+.card__small {
+	grid-column: span 2
+	;
+}
+
+.getinspired__card {
+	display: block;
+	position: relative;
+	overflow: hidden;
+}
+
+.getinspired__card::after {
+	display: block;
+	content: '';
+	height: 100%;
+	width: 100%;
+	background-color: rgba(21, 24, 36, 0.4);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.getinspired__card__picture {
+	width: 100%;
+	height: 100%;
+	transition: .2s;
+	object-fit: cover;
+}
+
+.getinspired__card:hover .getinspired__card__picture {
+	transform: scale(1.03);
+}
+
+.getinspired__card__caption {
+	position: absolute;
+	left: 29px;
+	bottom: 27px;
+	z-index: 2;
+	font-weight: 700;
+	font-size: 50px;
+	line-height: 60px;
+	color: #FFFFFF;
+}
+
+.getinspired__card__link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+}
+
+/**************** aboutplaces *********************/
+.aboutplaces {
+	max-width: 1260px;
+	margin: 0 auto 189px auto;
+
+}
+
+.aboutplaces__cards {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	gap: 66px;
+}
+
+.aboutplaces__card__picture {
+	width: 100%;
+}
+
+.aboutplaces__card__title {
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 40px;
+	color: #102746;
+	margin: 26px 0 80px 40px;
+}
+
+.prefecture__card__text {
+	font-size: 16px;
+	line-height: 24px;
+	color: #102746;
+	margin: 0 40px 50px 40px;
+}
+
+.prefecture__card__link {
+	font-size: 16px;
+	line-height: 24px;
+	color: #006DFE;
+	padding-right: 59px;
+	background: url(../pictures/svg/benefits-Shape.svg) no-repeat 95% center;
+	transition: .1s;
+	margin: 0 0 50px 40px;
+}
+
+.prefecture__card__link:hover, .prefecture__card__link:focus, .prefecture__card__link:active {
+		background: url(../pictures/svg/benefits-Shape.svg) no-repeat right center;
+	color: #004fb9;
+}
+
+/***************** today ***********************/
+
+.today {
+	max-width: 1260px;
+	margin: 0 auto;
+	margin-bottom: 144px;
+}
+
+.today__title {
+	position: relative;
+	font-weight: 500;
+	font-size: 35px;
+	line-height: 42px;
+	color: #102746;
+	margin-bottom: 64px;
+}
+
+.today__title::after {
+	position: absolute;
+	display: block;
+	content: '';
+	left: 0;
+	bottom: -10px;
+	width: 253px;
+	height: 3px;
+	background: #006DFE;
+}
+
+.today__cards {
+	display: grid;
+	grid-template-columns: repeat(6,1fr);
+	gap: 57px;
+}
+
+.today__card {
+	grid-column: span 2;
+}
+
+.today__card__pic {
+	width: 100%;
+}
+
+.today__pic__wrapper {
+	position: relative;
+	margin-bottom: 45px;
+}
+
+.today__card__info {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 55px;
+	background: rgba(21, 24, 36, 0.6);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+
+.card__info__title {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 24px;
+	color: #FFFFFF;
+	margin: 0 auto 0 25px;
+}
+
+.today__card__likes, .today__card__comments {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	color: #FFFFFF;
+}
+
+.today__card__likes {
+	padding-right: 20px;
+	background: url(../pictures/svg/heart-ico.svg) no-repeat right center;
+}
+.today__card__comments {
+	margin: 0 25px 0 14px;
+	padding-right: 23px;
+	background: url(../pictures/svg/comment-ico.svg) no-repeat right center;
+}
+
+.today__card__text {
+	font-size: 16px;
+	line-height: 24px;
+	color: #102746;
+	margin-bottom: 31px;
+}
+
+.today__card__link {
+	display: inline-block;
+	font-size: 16px;
+	text-align: center ;
+	//vertical-align: bottom;
+	color: #FFFFFF;
+	width: 118px;
+	height: 42px;
+	background-color: #006DFE;
+	padding: 12px 0;
+}
+
+.today__card__link:hover, .today__card__link:focus, .today__card__link:active {
+	background-color: #004fb9;
+}
+
+/******************** video ************************/
+.video__wrapper {
+	position: relative;
+	width: 100%;
+	padding-top: 56.25%;
+}
+
+.video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/******************* footer ************************/
+.footer {
+	background-color: #0E1D28;
+	display: flex;
+}
+
+.footer__logo__wrapper {
+	width: 50%;
+}
+
+.footer__logo {
+	width: 170px;
+	height: 184px;
+	background: url(../pictures/svg/footer-logo.svg) no-repeat bottom;
+	padding-top: 119px;
+	margin-left: 194px;
+}
+
+.footer__nav{
+	width: 50%;
+	padding: 119px 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-right: 194px;
+}
+
+.footer__nav__column {
+	display: flex;
+	flex-direction: column;    //запомнить это свойство !
+}
+
+.footer__nav__caption {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 24px;
+	color: #FFFFFF;
+}
+
+.footer__nav__link {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	color: #FFFFFF;
+}
+
+/******************** media ***************************/
+@media screen and (max-width: 1259px){
+	.discover__wrapper, .header__nav, .getinspired__title__wrapper, .today, .aboutplaces {
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+
+	.footer__nav {
+		margin-right: 50px;
+	}
+
+	.footer__logo {
+		margin-left: 50px;
+	}
+
+	.benefits {
+		box-shadow: none;
+		margin-bottom: 60px;
+	}
+
+	.benefits__cards {
+		margin: 0 15px;
+		column-gap: 25px;
+		padding-bottom: 60px;
+	}
+
+	.card__large, .card__small {
+	grid-column: span 6;
+}
+
+ .card__small {
+ 	max-height: 354px;
+ }
+
+	.benefits__title {
+		padding: 45px 15px;
+	}
+
+	.aboutplaces__cards {
+		column-gap: 10px;
+	}
+
+	.aboutplaces__card__title {
+		margin: 0 20px 20px 20px;
+	}
+
+	.prefecture__card__text {
+		margin: 20px;
+	}
+
+	.prefecture__card__link {
+		margin: 20px;
+	}
+
+	.today__cards {
+		column-gap: 20px;
+	}
+
+	.today__card {
+		grid-column: span 3;
+	}
+}
+
+@media screen and (max-width: 767px) {
+
+
+	.header__burger {
+	position: fixed;
+	top: 30px;
+	right: 30px;
+	width: 40px;
+	height: 28px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	}
+
+	.burger__line {
+	display: block;
+	width: 100%;
+	height: 3px;
+	background-color: #fff;
+	}
+
+	.header__nav {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: #0E1D28;
+		opacity: .9;
+		flex-direction: column;
+		justify-content: flex-start;
+		padding-top: 100px;
+		z-index: 10;
+		transform: translateX(100%);
+		transition: .2s all linear;
+	}
+	.header__nav__mobile {
+		transform: translateX(0);
+	}
+
+	.header__logo {
+	}
+
+	.header__nav__link {
+		display:inline-block;
+		width: 100%;
+		font-size: 42px;
+		line-height: 48px;
+		margin: 0 0 30px 80px;
+	}
+
+
+	.heaeder__nav__close {
+		position: absolute;
+		top: 30px;
+		right: 30px;
+		width: 50px;
+		height: 50px;
+		z-index: 11;
+	}
+
+	.nav__close__line {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 3px;
+		background-color: #fff;
+		transform: translateY(-50%);
+		top: 50%;
+	}
+
+	.nav__close__line:first-child {
+		transform: rotate(-45deg);
+	}
+
+	.nav__close__line:last-child {
+		transform: rotate(45deg);
+	}
+
+	.aboutplaces__card {
+		grid-column: span 2;
+	}
+
+	.aboutplaces__card__mobile {
+		grid-row-start: 3;
+	}
+
+	.benefits__card {
+		grid-column: span 3;
+	}
+
+	.getispired__title {
+		margin-bottom: 30px;
+	}
+
+	.discover__form__input {
+		margin-top: 20px;
+		margin-right: 10px;
+		padding-bottom: 15px;
+		font-size: 14px;
+		background: transparent url(../pictures/svg/Oval.svg) no-repeat top 3px  left;
+	}
+
+	.discover__form__input::placeholder {
+		font-size: 14px;
+		line-height: 18px;
+	}
+
+	.discover__title {
+		font-size: 36px;
+    line-height: 40px;
+    padding-top: 150px;
+	}
+
+	.discover__text {
+		font-size: 14px;
+    line-height: 22px;
+	}
+
+	.discover__form__button {
+		width: 100%;
+		font-size: 20px;
+    line-height: 24px;
+	}
+
+	.getispired__title::after, .today__title::after {
+		width: 80px;
+	}
+
+	.getinspired__card__caption {
+		font-size: 34px;
+    line-height: 38px;
+
+	}
+
+	.today__card {
+		grid-column: span 6;
+	}
+
+	.footer {
+		flex-direction: column;
+	}
+
+	.footer__logo__wrapper {
+		width: 100%;
+	}
+
+	.footer__nav {
+		width: 100%;
+		padding: 15px;
+	}
+
+	.discover__form__input {
+		width: 220px;
+	}
+
+}
