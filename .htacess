@@ -1,0 +1,1 @@
+Header always edit Set-cookie(.*)"$1;SameSite=Lax"
